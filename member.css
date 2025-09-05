@@ -1,0 +1,160 @@
+.members {
+  padding: 40px 20px;
+  background: #fffbea; /* matches your site background */
+}
+
+.member-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;              /* space between text and image */
+  max-width: 1200px;
+  margin: 0 auto;         /* center on page */
+}
+.intro{
+    font-size: 2rem;
+}
+.member-container .intro {
+  flex: 0 0 70%;          /* fixed to 70% width */
+}
+
+.member-container .intro h1 {
+  color: #871111;
+  margin-bottom: 15px;
+}
+
+.member-container .intro p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.member-container .side-photo img {
+  width: 100%;
+  max-height: 300px;   /* 👈 limit height */
+  border-radius: 10px;
+  object-fit: cover;   /* crop nicely without distortion */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+.member-container .side-photo img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.com-txt{
+    text-align: center;
+}
+
+.commitee-member {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fffbea;  /* dark background like screenshot */
+  color: #fff;
+}
+
+.commitee-member h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+/* Name */
+.member-card h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background: #871111;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Member photo */
+.member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff6600; /* orange border */
+  margin-bottom: 15px;
+}
+
+
+/* Role */
+.member-card p {
+  color: #d9c8c8;
+  font-size: 0.9rem;
+}
+
+/* Start hidden */
+.member-card {
+  opacity: 0;
+  transform: translateY(30px);  /* slide up effect */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When visible */
+.member-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .member-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .member-container .intro,
+  .member-container .side-photo {
+    flex: 0 0 100%;   /* full width */
+  }
+
+  .member-container .side-photo img {
+    max-width: 1000%;   /* don’t stretch too wide */
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .member-card img {
+    width: 100px;
+    height: 100px;
+  }
+  .member-card h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .member-card img {
+    width: 100px;
+    height: 100px;
+  }
+  .member-card h3 {
+    font-size: 1rem;
+  }
+}
+
